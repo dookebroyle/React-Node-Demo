@@ -28,32 +28,13 @@ app.get("/api", async (req, res) => {
     //console.log(response);
     return response.json();
   }).then(data => {
-    // Work with JSON data here
-    console.log({data});
     res.json({data})
   }).catch(err => {
     // Do something for an error here
     console.log("Error Reading data " + err);
   });
-
-
-
-
-  // fetch('https://catfact.ninja/fact', {agent})
-  // .then(res => { res.json();})
-  // .then(json => {
-  //   // Work with JSON data here
-  //   console.log({json});
-  //   res.send({json})
-  // }).catch(err => {
-  //   // Do something for an error here
-  //   console.log("Error Reading data " + err);
-  // });
 })
 
-
-
-  
 // // All other GET requests not handled before will return our React app
 // app.get('*', (req, res) => {
 //     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
